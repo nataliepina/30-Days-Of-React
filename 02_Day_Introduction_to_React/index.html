@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500|Roboto:300,400,500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>30 Days Of React Challenge</title>
+    <style>
+      /* == General style === */
+      * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+      }
+
+      html,
+      body {
+        height: 100%;
+        line-height: 1.5;
+        font-family: 'Montserrat';
+        font-weight: 300;
+        color: black;
+      }
+
+      .root {
+        min-height: 100%;
+        position: relative;
+      }
+
+      h1 {
+        font-size: 70px;
+        font-weight: 300;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px;
+        /* Height of the footer */
+        background: #935dac;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <div class="root"></div>
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@16/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      const user = {
+        fullName: 'Natalie Pina',
+        country: 'US',
+        title: 'UI Engineer',
+        email: 'natalie.a.pina@gmail.com',
+        phone: '123-456-7890'
+      }
+      const date = 'Nov 2, 2020'
+      const day = 2
+      const favoriteThings = ['coffee', 'plants', 'skincare']
+      const currentFavs = 'My current favorite things...'
+
+      const name = (
+        <div>
+          <h1>{user.fullName}</h1>
+          <p>{user.title}</p>
+          <p>{user.country}</p>
+          <p>{user.email}</p>
+          <p>{user.phone}</p>
+        </div>
+      )
+
+      const footer = (
+        <footer>
+          <div>
+            <p>{`This is my footer on ${date}, Day: ${day}`}</p>
+          </div>
+        </footer>
+      )
+
+      const favoritesFormatted = favoriteThings.map(fav => <li key={fav}>{fav}</li>)
+      const favorites = (
+        <div>
+          <h2>{currentFavs}</h2>
+          <ul>
+            {favoritesFormatted}
+          </ul>
+        </div>
+      )
+
+      const app = (
+        <div className='app'>
+          {name}
+          {footer}
+        </div>
+      )
+
+      ReactDOM.render(app, rootElement)
+    </script>
+  </body>
+</html>

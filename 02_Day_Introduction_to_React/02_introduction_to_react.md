@@ -1555,49 +1555,77 @@ Now, you have a very good understanding of how to create JSX elements and also h
 #### Exercises: What is React?
 
 1. What is React?
+A JavaScript library for building UIs.
 2. What is a library?
+A programming library is a suite of helper functions which another program can make use of, without the developer of the program having to write each one themselves.
 3. What is a single page application?
+React is a SPA(single page application) because it only has one entry point 'index.html' and it uses that 'sigle page' to conditionaly render elements to. 
 4. What is a component ?
+A building block for a UI element.
+
 5. What is the latest version of React?
+v17.0 has been newly released
 6. What is DOM?
+Document Object Model, objects that comprise the structure and content of a document on the web.
 7. What is React Virtual DOM?
+React does not interact directly with the DOM, there is another layer that is the Virtual DOM, as we make changes react compares the virtual DOM to the real DOM and updates only the elements that need to be updated which is what helps react to create fast applications.  
 8. What does a web application or a website(composed of) have?
+It is composed of different components.
 
 #### Exercises: Why React?
 
 1. Why did you chose to use react?
+* Fast, innovative, good community, job market
 2. What measures do you use to know popularity ?
+* Data, community consensus
 3. What is more popular, React or Vue ?
+* React currently
 
 #### Exercises: JSX
 
 1. What is an HTML element?
+This is the root element, and it defines the whole document.
 2. How to write a self closing HTML element?
+<!-- <img /> -->
 3. What is an HTML attribute? Write some of them
+<!-- <div>, <p>, <article>, <section>, <h1> -->
+
 4. What is JSX?
+* Javascript XML
 5. What is babel?
+* Babel is a JavaScript transpiler.
 6. What is a transpiler?
+* A transpiler is like a translator that takes source code from one language and compile it to another language. For example, JSX is converted to JS by using the Babel transpiler.
 
 #### Exercises: JSX Elements
 
 1. What is a JSX element?
+* A JSX element is a JavaScript XML element, this is the form of markup that React works with and transpiles to HTML.
 2. Write your name in a JSX element and store it in a name variable
+[x]
 3. Write a JSX element which displays your full name, country, title, gender, email, phone number. Use h1 for the name and p for the rest of the information and store it in a user variable
+[x]
 4. Write a footer JSX element
+[x]
 
 #### Exercises: Inline Style
 
 1. Create a style object for the main JSX
+[x]
 2. Create a style object for the footer and app JSX
+[x]
 3. Add more styles to the JSX elements
+[x]
 
 #### Exercises: Internal Styles
 
 1. Apply different styles to your JSX elements
+[x]
 
 #### Exercise: Inject data to JSX
 
 1. Practice how to make JSX element and injecting dynamic data(string, number, boolean, array, object)
+[x]
 
 🎉 CONGRATULATIONS ! 🎉
 
