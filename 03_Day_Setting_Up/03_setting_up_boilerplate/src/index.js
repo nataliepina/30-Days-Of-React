@@ -3,6 +3,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 // To get the root element from the HTML document
 import asabenehImage from './images/asabeneh.jpg'
+import cssLogo from './images/css_logo.png'
+import htmlLogo from './images/html_logo.png'
+import reactLogo from './images/react_logo.png'
 
 // to import the doSomeMath from the math.js with or without extension
 import doSomeMath from './math.js'
@@ -25,6 +28,10 @@ const subtitle = 'JavaScript Library'
 const author = {
   firstName: 'Asabeneh',
   lastName: 'Yetayeh',
+  title: 'Senior Developer',
+  country: 'Finland',
+  skills: ['HTML', 'CSS', 'Python', 'JavaScript'],
+  startDate: 'August 30, 2020'
 }
 const date = 'Oct 2, 2020'
 
@@ -63,12 +70,53 @@ const personAge = (
 )
 
 // JSX element, main
-const techs = ['HTML', 'CSS', 'JavaScript']
-const techsFormatted = techs.map((tech) => <li>{tech}</li>)
+const skillsFormatted = author.skills.map(skill => <p key={skill}>{skill}</p>)
+const joined = `Joined on ${author.startDate}`
 
 const user = (
-  <div>
-    <img src={asabenehImage} alt='asabeneh image' />
+  <div className='user-wrapper'>
+    <img className="user-img" src={asabenehImage} alt='asabeneh image' />
+      <h3>{`${author.firstName} ${author.lastName}`}</h3>
+      <p>{`${author.title}, ${author.country}`}</p>
+      <h3>Skills</h3>
+      <div className="user-skills">
+        {skillsFormatted}
+      </div>
+      <p>
+        {joined}
+      </p>
+  </div>
+)
+
+const technologies = [cssLogo, reactLogo, htmlLogo]
+const techImages = technologies.map(img => (<img key={img} src={img} alt={`${img} logo`} className="tech-img"/>))
+
+const tech = (
+  <div className='tech-container'>
+    <h2 className='tech-title'>Front End Technologies</h2>
+      <div className='tech-wrapper'>
+        <div className="tech-flex">
+          {techImages}
+        </div>
+    </div>
+  </div>
+)
+
+const subHeader = 'Subscribe'
+const subBody = 'Sign Up with Your Email to Recieve News and Updates'
+
+const subscribe = (
+  <div className='subscribe-container'>
+    <div className='subscribe-wrapper'>
+      <h1 className='subscribe-title'>{subHeader.toUpperCase()}</h1>
+      <p>{subBody}</p>
+      <form className="subscribe-form">
+        <input type="text" placeholder="First Name" />
+        <input type="text" placeholder="First Name"/>
+        <input type="text" placeholder="Email"/>
+      </form>
+      <button type="submit" value="Submit" className="subscribe-btn">{subHeader}</button>
+    </div>
   </div>
 )
 
@@ -83,9 +131,10 @@ const main = (
         </strong>
         :
       </p>
-      <ul>{techsFormatted}</ul>
       {result}
       {personAge}
+      {tech}
+      {subscribe}
       {user}
     </div>
   </main>

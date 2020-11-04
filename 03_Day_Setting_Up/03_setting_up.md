@@ -741,13 +741,21 @@ The boilerplate code can be found [here](../03/../03_Day_Setting_Up/30-days-of-r
 ## Exercises: Level 1
 
 1. What is a module?
+Function/s than can be exported and imported throughout an application. 
 2. What is package?
+A module or a collection of modules. 
 3. What is the difference between a module and a package.
+Ex: React is a package but importing 'react' from React is importing the module 'react'
 4. What is NPM?
+Node Package Manager.  When you install Node you also have NPM. NPM allows to create packages, use packages and distribute packages. 
+
 5. What is Webpack?
+JS module bundler
 6. How do you create a new React project?
+npx create-react-app name-of-your-project
 7. What are the files and folders inside a project folder(package.json, package-lock.json or yarn.lock, .gitignore,node_modules and public)?
 8. What is your favorite code editor (I believe that it is Visual Studio Code)?
+VS code
 9. Add different Visual Studio Code extensions to improve your productivity(eg. prettier, ESLint etc).
 10. Try to make a different custom module in a different file and import it to index.js.
 
